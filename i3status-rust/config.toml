@@ -1,0 +1,59 @@
+icons_format = "{icon}"
+
+[theme]
+theme = "native"
+[theme.overrides]
+separator = "/"
+separator_fg = "#908caa"
+
+[icons]
+icons = "awesome4"
+# [icons.overrides]
+# bat = ["|E|", "|_|", "|=|", "|F|"]
+# bat_charging = "|^| "
+
+
+[[block]]
+block = "custom"
+command = "~/.config/waybar/scripts/recstatus.sh"
+interval = 1
+hide_when_empty = true
+
+[[block]]
+block = "packages"
+package_manager = ["pacman"]
+format = " $icon $pacman "
+format_up_to_date = " $icon N/A "
+[[block.click]]
+button = "left"
+cmd = "fakeroot pacman -Qu --dbpath /tmp/checkup-db-i3statusrs-$USER/ | fuzzel -d"
+
+[[block]]
+block = "uptime"
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "used"
+alert_unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+format = " root: $percentage "
+
+[[block]]
+block = "music"
+format = " $icon {$combo.str(max_w:40,rot_interval:0.5) $play $next }"
+
+[[block]]
+block = "sound"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "time"
+interval = 5
+format = " $timestamp.datetime(f:'%a %d/%m %R') "
+
+
