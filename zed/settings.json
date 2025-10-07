@@ -1,0 +1,64 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "disable_ai": true,
+  "buffer_font_family": "BlexMono Nerd Font",
+  "inlay_hints": {
+    "enabled": false
+  },
+  "base_keymap": "VSCode",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "vim_mode": true,
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 16,
+  "buffer_font_size": 13.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Rosé Pine"
+  },
+  // Git blame
+  "git": {
+    "inline_blame": {
+      "enabled": true,
+      "delay_ms": 0,
+      "min_column": 0,
+      "show_commit_summary": true
+    }
+  },
+  // Visual settings
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_project_items": true,
+    "show_sign_in": false,
+    "show_menus": false
+  },
+  "tabs": {
+    "show_diagnostics": "all"
+  },
+  "project_panel": {
+    "entry_spacing": "comfortable"
+  },
+  "cursor_shape": "bar",
+  "show_whitespaces": "trailing",
+  "relative_line_numbers": true,
+  // Hide unused panels
+  "collaboration_panel": {
+    "button": false
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  }
+}
